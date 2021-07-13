@@ -7,17 +7,23 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/breakdowns/slam-mirrorbot)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/breakdowns/slam-mirrorbot)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/breakdowns/slam-mirrorbot)
+![GitHub watchers](https://img.shields.io/github/watchers/breakdowns/slam-mirrorbot)
 ![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/slam-mirrorbot?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/breakdowns/slam-mirrorbot?color=red)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/breakdowns/slam-mirrorbot)
 ![GitHub](https://img.shields.io/github/license/breakdowns/slam-mirrorbot)
-[![Slam Mirror Updates](https://img.shields.io/badge/slam%20mirror%20bot-channel-blue)](https://t.me/SlamMirrorUpdates)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?label=Docker%20Pull)
+[![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamMirrorUpdates)
 
 **Slam Mirror Bot** is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.
 
 # Features supported:
+<details>
+    <summary><b>Click Here For More Details</b></summary>
+
 ## Additional Features
-- Updater (**NOTE**: You must upload your **token.pickle** to Index and fill your **token.pickle** url to **TOKEN_PICKLE_URL**, because your **token.pickle** will deleted after update)
+- Updater (**NOTE**: You must upload your **token.pickle** to Index and fill your **token.pickle** url to **TOKEN_PICKLE_URL**, because your **token.pickle** will deleted after update, for more info please check [Setting up config file](https://github.com/breakdowns/slam-mirrorbot/tree/master#setting-up-config-file))
 - Limiting size Torrent/Direct, Tar/Unzip, Mega, cloning Google Drive support
 - Get detailed info about replied media (Only for Telegram file)
 - Stop duplicate cloning Google Drive & mirroring Mega support
@@ -29,6 +35,7 @@
 - Extracting **tar.xz** support
 - Heroku config support
 - Custom Image support
+- Custom Progress bar
 - Counting file/folder
 - View Link button
 - Shell and Executor
@@ -68,6 +75,8 @@ APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT,
 HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS, 
 NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 ```
+
+</details>
 
 # How to deploy?
 Deploying is pretty much straight forward and is divided into several steps as follows:
@@ -164,8 +173,8 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - **HEROKU_API_KEY**: (Only if you deploying on Heroku) Your Heroku API key, get it from https://dashboard.heroku.com/account.
 - **HEROKU_APP_NAME**: (Only if you deploying on Heroku) Your Heroku app name.
 - **IGNORE_PENDING_REQUESTS**: If you want the bot to ignore pending requests after it restarts, set this to `True`.
-- **FINISHED_PROGRESS_STR**: Single character for finished progress. Example: "Uploading ●●●●○○○○ %50". This value sets: "●". You can Select any character from these listed sites: https://coolsymbol.com, https://changaco.oy.lc/unicode-progress-bars/, https://text-symbols.com/
-- **UNFINISHED_PROGRESS_STR**: Single character for finished progress. Example: "Uploading ●●●●○○○○ %50". This value sets: "○". You can Select any character from these listed sites: https://coolsymbol.com, https://changaco.oy.lc/unicode-progress-bars/, https://text-symbols.com/
+- **FINISHED_PROGRESS_STR**: Single character for finished progress. Example: ```Uploading ●●●●○○○○ %50```. This value sets: `●`. You can Select any character from these listed sites: https://coolsymbol.com, https://changaco.oy.lc/unicode-progress-bars/, https://text-symbols.com/
+- **UNFINISHED_PROGRESS_STR**: Single character for finished progress. Example: ```Uploading ●●●●○○○○ %50```. This value sets: `○`. You can Select any character from these listed sites: https://coolsymbol.com, https://changaco.oy.lc/unicode-progress-bars/, https://text-symbols.com/
 - **SHORTENER_API**: Fill your Shortener api key if you are using Shortener.
 - **SHORTENER**: if you want to use Shortener in Gdrive and index link, fill Shortener url here. Examples:
 ```
@@ -218,7 +227,7 @@ sudo docker run mirrorbot
 
 ## Deploying on Heroku
 
-- Give stars and Fork this repo then upload **token.pickle** to your forks, or you can upload your **token.pickle** to your Index and put your **token.pickle** link to **TOKEN_PICKLE_URL**. How to generate **token.pickle**? [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
+- Give stars and Fork this repo then upload **token.pickle** to your forks, or you can upload your **token.pickle** to your Index and put your **token.pickle** link to **TOKEN_PICKLE_URL** (**NOTE**: If you didn't upload **token.pickle** uploading will not work). How to generate **token.pickle**? [Read here](https://github.com/breakdowns/slam-mirrorbot#getting-google-oauth-api-credential-file)
 - Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen
 - Recommended to use 1 App in 1 Heroku accounts
 
